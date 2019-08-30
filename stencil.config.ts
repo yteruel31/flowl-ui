@@ -22,7 +22,10 @@ export const config: Config = {
     },
     {
       type: 'www',
-      serviceWorker: null // disable service workers
+      serviceWorker: null, // disable service workers
+      copy: [
+        { src: 'demo-components', dest: 'demo-components' }
+      ]
     }
   ]
 };
