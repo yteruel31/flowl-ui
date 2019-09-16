@@ -6,10 +6,36 @@
 
 
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import {
+  Color,
+  PredefinedButtonType,
+  PredefinedGlobalSize,
+} from './interface';
 
 
 export namespace Components {
-  interface OButton {}
+  interface OButton {
+    /**
+    * The button color
+    */
+    'color'?: Color;
+    /**
+    * The button enable status
+    */
+    'disabled': boolean;
+    /**
+    * The outline style
+    */
+    'outline': boolean;
+    /**
+    * The button size
+    */
+    'size'?: PredefinedGlobalSize;
+    /**
+    * The button type
+    */
+    'type'?: PredefinedButtonType;
+  }
 }
 
 declare global {
@@ -26,7 +52,28 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface OButton extends JSXBase.HTMLAttributes<HTMLOButtonElement> {}
+  interface OButton extends JSXBase.HTMLAttributes<HTMLOButtonElement> {
+    /**
+    * The button color
+    */
+    'color'?: Color;
+    /**
+    * The button enable status
+    */
+    'disabled'?: boolean;
+    /**
+    * The outline style
+    */
+    'outline'?: boolean;
+    /**
+    * The button size
+    */
+    'size'?: PredefinedGlobalSize;
+    /**
+    * The button type
+    */
+    'type'?: PredefinedButtonType;
+  }
 
   interface IntrinsicElements {
     'o-button': OButton;

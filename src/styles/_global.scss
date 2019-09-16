@@ -1,0 +1,7 @@
+@import './utils/_variables.scss';
+@import './mixins';
+
+body {
+  background: $body-default-bg-color;
+  font-family: 'PTSans Regular', sans-serif;
+}

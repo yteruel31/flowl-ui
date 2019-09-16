@@ -15,6 +15,9 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
+      copy: [
+        { src: "fonts", dest: "assets/fonts" },
+      ],
       esmLoaderPath: '../loader'
     },
     {
@@ -24,7 +27,8 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
       copy: [
-        { src: 'demo-components', dest: 'demo-components' }
+        { src: 'fonts', dest: 'collection/assets/fonts' },
+        { src: 'demo-components', dest: 'demo-components' },
       ]
     }
   ]

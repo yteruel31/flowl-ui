@@ -1,0 +1,31 @@
+//
+// Background colors
+//
+
+@each $colorName,
+$color in $theme-colors {
+  .bkg-#{$colorName} {
+    background-color: $color;
+    border-color: $color !important;
+  }
+}
+
+.bkg-transparent {
+  background: transparent !important;
+}
+
+//Colors for texts
+
+@each $themeName,
+$value in $theme-colors {
+  .nv-text-#{$themeName} {
+    color: $value !important;
+
+    span,
+    p,
+    code,
+    pre [h-6] {
+      color: $value !important;
+    }
+  }
+}

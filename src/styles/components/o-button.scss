@@ -1,0 +1,181 @@
+.o-button {
+  display: inline-block;
+
+  &.o-button-block {
+    display: block;
+    width: 100%;
+
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.o-button-base {
+
+  //
+  // Base Style
+  //
+
+  background-color: darken($default, 15%);
+  border-color: $default;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 2px;
+  color: $default-color;
+  font-family: '';
+  font-size: $font-size-base;
+  margin-bottom: $margin-sm-y;
+  margin-top: $margin-sm-y;
+  outline: none !important;
+  overflow: hidden;
+  padding: $padding-button;
+  position: relative;
+  text-decoration: none;
+  transition-property: opacity, background-color, color;
+
+  .o-ripple {
+    background-color: $default;
+  }
+
+  &:hover {
+    background-color: $default;
+  }
+
+  &.o-button-outline {
+    background-color: transparent;
+    color: $default-color;
+
+    span {
+      color: $default-color;
+    }
+  }
+
+  &.o-button-text {
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      background-color: rgba($default, 0.5);
+    }
+  }
+
+  // Disabled style
+
+  &.disabled,
+  &:disabled {
+    background-color: ligthen($primary, 10%);
+    cursor: not-allowed;
+  }
+
+  span {
+    position: relative;
+    z-index: 3;
+  }
+
+  // Fix height from buttons
+  .badge {
+    margin-bottom: -5px;
+    margin-top: -5px;
+  }
+
+  @each $themeName,
+  $value in $theme-colors {
+
+    //
+    // Global style with theme colors
+    //
+
+    // Default
+
+    &.o-button-#{$themeName} {
+      background-color: darken($value, 15%);
+      border-color: $value;
+      color: $white;
+
+      &:hover {
+        background-color: $value;
+      }
+
+      span {
+        color: $white;
+      }
+
+      // Disabled style      
+      &.disabled,
+      &:disabled {
+        border-color: darken($value, 15%);
+        color: darken($white, 25%);
+      }
+
+      &.o-button-text {
+        background-color: transparent;
+        border-color: transparent;
+        color: $value;
+
+        span {
+          color: $value;
+        }
+
+        &:hover {
+          background-color: rgba($default, 0.5);
+        }
+      }
+
+      // 
+      // Outline style
+      // 
+      &.o-button-outline {
+        background-color: $white;
+        border-color: $value;
+        color: $value;
+
+        &:hover,
+        &:hover span {
+          border-color: lighten($value, 10%);
+          color: lighten($value, 10%);
+        }
+
+        span {
+          color: $value;
+        }
+
+        // Disabled style      
+        &.disabled,
+        &:disabled {
+          border-color: lighten($value, 30%);
+          color: lighten($value, 30%);
+        }
+      }
+    }
+  }
+
+  //
+  // Global size styles
+  //
+
+  // Small style
+  &.o-button-small {
+    font-size: $font-size-sm;
+    padding: $padding-sm-y $padding-sm-x;
+  }
+
+  // Medium style
+  &.o-button-medium {
+    font-size: $font-size-md;
+    padding: $padding-md-y $padding-md-x;
+  }
+
+  // Large style
+  &.o-button-large {
+    font-size: $font-size-lg;
+    padding: $padding-lg-y $padding-lg-x;
+  }
+
+  // Extra large style
+  &.o-button-big {
+    font-size: $font-size-big;
+    padding: $padding-big-y $padding-big-x;
+  }
+}

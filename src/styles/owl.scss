@@ -1,5 +1,5 @@
-@import './_global';
-@import './_mixins';
-@import './_utils';
-@import './components/_buttons';
-@import './demo';
+@import './_global.scss';
+@import './_utils.scss';
+@import './_mixins.scss';
+@import './components/o-button.scss';
+@import './demo.scss';

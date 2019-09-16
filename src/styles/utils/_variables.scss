@@ -1,0 +1,107 @@
+// Fonts
+
+$font-size-base: 16px;
+$font-size-md: 18px;
+$font-size-lg: 20px;
+$font-size-big: 24px;
+$font-size-sm: 12px;
+$font-weight-light: 200 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+
+// Colors
+
+$default: #d3d3d3;
+$primary: #00a123;
+$secondary: #0d518b;
+$danger: #e23e32;
+$info: #7f7f7f;
+$warning: #ff9800;
+$success: #5dda23;
+$selected: #fff;
+$link: #fff;
+$dark: #1a1a1a;
+$black: #000;
+$white: #fff;
+$text-muted: #7f7f7f85;
+$gray-text: #7c7c7c;
+$dark-gray: #5f5f5fff;
+$light-gray: #c7c7c7ff;
+
+// Body
+
+$body-default-bg-color: #3E434E;
+
+
+// Theme
+
+$default-color: #2e2e2e;
+$default-border-color: #aab2ba;
+
+// Themes
+$theme-colors: () !default;
+$theme-colors: map-merge(('default': $default,
+    'primary': $primary,
+    'secondary': $secondary,
+    'danger': $danger,
+    'info': $info,
+    'warning': $warning,
+    'success': $success,
+    'selected': $selected,
+    'link': $link,
+    'dark': $dark,
+    'black': $black,
+    'white': $white,
+  ),
+  $theme-colors);
+
+//
+// Paddings
+//
+
+$padding-base-y: 8px;
+$padding-base-x: 12px;
+
+// Padding small sile
+$padding-sm-y: 4px;
+$padding-sm-x: 6px;
+
+//Padding medium size
+$padding-md-y: 14px;
+$padding-md-x: 16px;
+
+//Padding large size
+$padding-lg-y: 24px;
+$padding-lg-x: 26px;
+
+// Padding extra large
+$padding-big-y: 36px;
+$padding-big-x: 28px;
+
+$padding-mark: 4px;
+
+$padding-button: 13px;
+
+//
+// Margin
+//
+
+$margin-base-y: 10px;
+$margin-base-x: 12px;
+
+// Margin small sile
+$margin-sm-y: 4px;
+$margin-sm-x: 6px;
+
+//Margin medium size
+$margin-md-y: 14px;
+$margin-md-x: 16px;
+
+//Margin large size
+$margin-lg-y: 24px;
+$margin-lg-x: 26px;
+
+// Margin extra large
+$margin-big-y: 36px;
+$margin-big-x: 28px;

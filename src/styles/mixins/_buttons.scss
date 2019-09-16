@@ -1,0 +1,22 @@
+@mixin small() {
+  font-size: $font-size-sm;
+  padding: $padding-sm-y $padding-sm-x;
+}
+
+// Medium style
+@mixin medium() {
+  font-size: $font-size-md;
+  padding: $padding-md-y $padding-md-x;
+}
+
+// Large style
+@mixin large() {
+  font-size: $font-size-lg;
+  padding: $padding-lg-y $padding-lg-x;
+}
+
+// Extra large style
+@mixin big() {
+  font-size: $font-size-big;
+  padding: $padding-big-y $padding-big-x;
+}
