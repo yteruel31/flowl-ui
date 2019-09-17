@@ -38,6 +38,7 @@ $body-default-bg-color: #3E434E;
 
 $default-color: #2e2e2e;
 $default-border-color: #aab2ba;
+$default-active-border-color: #272727;
 
 // Themes
 $theme-colors: () !default;
@@ -68,15 +69,15 @@ $padding-sm-y: 4px;
 $padding-sm-x: 6px;
 
 //Padding medium size
-$padding-md-y: 14px;
-$padding-md-x: 16px;
+$padding-md-y: 12px;
+$padding-md-x: 18px;
 
 //Padding large size
-$padding-lg-y: 24px;
-$padding-lg-x: 26px;
+$padding-lg-y: 22px;
+$padding-lg-x: 28px;
 
 // Padding extra large
-$padding-big-y: 36px;
+$padding-big-y: 34px;
 $padding-big-x: 28px;
 
 $padding-mark: 4px;

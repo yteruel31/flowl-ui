@@ -16,6 +16,10 @@ import {
 export namespace Components {
   interface OButton {
     /**
+    * The text button is bold
+    */
+    'bold': boolean;
+    /**
     * The button color
     */
     'color'?: Color;
@@ -53,6 +57,10 @@ declare global {
 
 declare namespace LocalJSX {
   interface OButton extends JSXBase.HTMLAttributes<HTMLOButtonElement> {
+    /**
+    * The text button is bold
+    */
+    'bold'?: boolean;
     /**
     * The button color
     */

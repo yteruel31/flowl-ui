@@ -4,4 +4,38 @@
 body {
   background: $body-default-bg-color;
   font-family: 'PTSans Regular', sans-serif;
+  color: #e0e0e0;
+
+  li {
+    color: #0095da;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'PTSans Regular';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/PTSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PTSans Regular Italic';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/PTSans-Regularitalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PTSans Bold';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/PTSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PTSans Bold Italic';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/PTSans-Bolditalic.ttf') format('truetype');
 }

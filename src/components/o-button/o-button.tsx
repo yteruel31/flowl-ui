@@ -37,6 +37,11 @@ export class OButton {
    */
   @Prop() disabled: boolean = false;
 
+  /**
+   * The text button is bold
+   */
+  @Prop() bold: boolean;
+
   render() {
     return (
       <Host class={{
@@ -54,7 +59,7 @@ export class OButton {
             'o-button-warning': this.color === 'warning' ? true : false,
             'o-button-danger': this.color === 'danger' ? true : false,
             'o-button-success': this.color === 'success' ? true : false,
-            'o-button-outline': this.outline,
+            'o-button-bold': this.bold,
           }}
           type={this.type}
           disabled={this.disabled}>
