@@ -12,7 +12,6 @@ import {
   PredefinedGlobalSize,
 } from './interface';
 
-
 export namespace Components {
   interface OButton {
     /**
@@ -40,6 +39,14 @@ export namespace Components {
     */
     'type'?: PredefinedButtonType;
   }
+  interface OExpansionPanel {
+    'close': () => Promise<void>;
+    'disabled': boolean;
+    'open': boolean;
+    'toggleContent': () => Promise<void>;
+    'value': number;
+  }
+  interface OExpansionPanels {}
 }
 
 declare global {
@@ -50,8 +57,22 @@ declare global {
     prototype: HTMLOButtonElement;
     new (): HTMLOButtonElement;
   };
+
+  interface HTMLOExpansionPanelElement extends Components.OExpansionPanel, HTMLStencilElement {}
+  var HTMLOExpansionPanelElement: {
+    prototype: HTMLOExpansionPanelElement;
+    new (): HTMLOExpansionPanelElement;
+  };
+
+  interface HTMLOExpansionPanelsElement extends Components.OExpansionPanels, HTMLStencilElement {}
+  var HTMLOExpansionPanelsElement: {
+    prototype: HTMLOExpansionPanelsElement;
+    new (): HTMLOExpansionPanelsElement;
+  };
   interface HTMLElementTagNameMap {
     'o-button': HTMLOButtonElement;
+    'o-expansion-panel': HTMLOExpansionPanelElement;
+    'o-expansion-panels': HTMLOExpansionPanelsElement;
   }
 }
 
@@ -82,9 +103,17 @@ declare namespace LocalJSX {
     */
     'type'?: PredefinedButtonType;
   }
+  interface OExpansionPanel extends JSXBase.HTMLAttributes<HTMLOExpansionPanelElement> {
+    'disabled'?: boolean;
+    'open'?: boolean;
+    'value'?: number;
+  }
+  interface OExpansionPanels extends JSXBase.HTMLAttributes<HTMLOExpansionPanelsElement> {}
 
   interface IntrinsicElements {
     'o-button': OButton;
+    'o-expansion-panel': OExpansionPanel;
+    'o-expansion-panels': OExpansionPanels;
   }
 }
 

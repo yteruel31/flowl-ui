@@ -1,0 +1,53 @@
+.o-expansion-panels {
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+
+  .o-expansion-panel {
+    border-top: 1px solid lighten($dark, 35%);
+
+    header {
+      color: #ffffff;
+      background-color: lighten($body-default-bg-color, 5%);
+      font-family: 'PTSans Bold';
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: $padding-base-y $padding-base-x;
+      position: relative;
+
+      .header-container {
+        position: relative;
+        z-index: 2;
+      }
+
+      span,
+      h3 {
+        color: #ffffff;
+        font-family: 'PTSans Bold';
+      }
+    }
+
+    &.disabled {
+      header {
+        color: $text-muted;
+
+        span,
+        h3 {
+          color: $text-muted;
+        }
+      }
+    }
+  }
+
+  .o-expansion-panel-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    display: block;
+    padding: 0 $padding-base-x;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+}
